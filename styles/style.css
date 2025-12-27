@@ -21,8 +21,9 @@ body {
     font-family: 'Heebo', sans-serif;
     direction: rtl;
     background-color: var(--bg-dark);
-    height: 100vh;
-    overflow: hidden; 
+    min-height: 100vh; 
+    overflow-x: hidden; 
+    overflow-y: auto;
 }
 
 /* Split layout container */
@@ -30,7 +31,7 @@ body {
     display: flex;
     flex-direction: row; 
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Gallery section occupying 75% of the screen */
