@@ -41,20 +41,22 @@ body {
     min-height: 100vh;
     height: 100%;
     background-color: var(--bg-black);
+    display: flex; 
+    flex-direction: column;
 }
 
 #mercedesCarousel, 
 .carousel-inner, 
 .carousel-item {
     height: 100% !important;
-    min-height: 100vh;
+    flex: 1;
 }
 
 /* Ensures carousel images cover the full height */
 .carousel-item img {
-    min-height: 100vh;
-    height: 100%;
-    object-fit: cover;
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover !important;
 }
 
 /* Semi-transparent text container over the images */
