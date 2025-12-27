@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+    <head>
+        <!-- Page metadata and viewport settings -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>מרצדס - טופס צור קשר</title>
+        <!-- Favicon and external CSS libraries -->
+        <link rel="icon" type="image/png" href="images/Mercedes-Logo.png" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;700&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Main page container with flex layout -->
+        <div class="main-layout">
+            <!-- Right side image slider -->
+            <main class="gallery">
+                <div id="mercedesCarousel" class="carousel slide h-100 carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner h-100">
+                        <!-- Slide 1: GLC Coupe details -->
+                        <div class="carousel-item active h-100">
+                            <img
+                                src="images/GLC.webp"
+                                class="d-block w-100 h-100 object-fit-cover mobile-gallery-height"
+                                alt="GLC Coupe"
+                            />
+                            <div class="carousel-caption custom-caption">
+                                <h1 class="gallery-title">GLC Coupe - Shaped By Desire</h1>
+                                <div class="stats">
+                                    רמת אבזור בטיחותי <span class="highlight safety">3</span> דרגת זיהום אוויר
+                                    <span class="highlight pollution">14</span>
+                                </div>
+                                <p class="site-link">לפרטים: www.mercedes-benz.co.il</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2: CLA details -->
+                        <div class="carousel-item h-100">
+                            <img
+                                src="images/CLA.webp"
+                                class="d-block w-100 h-100 object-fit-cover mobile-gallery-height"
+                                alt="CLA"
+                            />
+                            <div class="carousel-caption custom-caption">
+                                <h1 class="gallery-title">CLA - Dynamic All The Way</h1>
+                                <div class="stats">
+                                    רמת אבזור בטיחותי <span class="highlight safety">6</span> דרגת זיהום אוויר
+                                    <span class="highlight pollution">12</span>
+                                </div>
+                                <p class="site-link">לפרטים: www.mercedes-benz.co.il</p>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3: CLE Coupe details -->
+                        <div class="carousel-item h-100">
+                            <img
+                                src="images/CLE.webp"
+                                class="d-block w-100 h-100 object-fit-cover mobile-gallery-height"
+                                alt="CLE"
+                            />
+                            <div class="carousel-caption custom-caption">
+                                <h1 class="gallery-title">CLE Coupe - Lead The Way</h1>
+                                <div class="stats">
+                                    רמת אבזור בטיחותי <span class="highlight safety">7</span> דרגת זיהום אוויר
+                                    <span class="highlight pollution">10</span>
+                                </div>
+                                <p class="site-link">לפרטים: www.mercedes-benz.co.il</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Slider navigation buttons -->
+                    <button
+                        class="carousel-control-prev"
+                        type="button"
+                        data-bs-target="#mercedesCarousel"
+                        data-bs-slide="prev"
+                    >
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button
+                        class="carousel-control-next"
+                        type="button"
+                        data-bs-target="#mercedesCarousel"
+                        data-bs-slide="next"
+                    >
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                </div>
+            </main>
+
+            <!-- Sidebar section with the form -->
+            <aside class="frame">
+                <div class="content-top">
+                    <!-- Branding and header -->
+                    <img src="images/Mercedes-Logo.png" alt="Mercedes Logo" class="logo" />
+                    <h2>השאירו פרטים ותהנו מהצעות מיוחדות על מגוון דגמי מרצדס</h2>
+
+                    <!-- Contact form inputs -->
+                    <form class="contact-form">
+                        <div class="field">
+                            <input type="text" placeholder="שם פרטי*" />
+                        </div>
+                        <div class="field">
+                            <input type="text" placeholder="שם משפחה*" />
+                        </div>
+                        <div class="field">
+                            <input type="tel" placeholder="טלפון*" class="align-right" />
+                        </div>
+                        <div class="field">
+                            <input type="email" placeholder="מייל*" class="align-right" />
+                        </div>
+
+                        <!-- Showroom selection -->
+                        <div class="field">
+                            <select name="branch" required>
+                                <option value="" disabled selected>בחר סניף*</option>
+                                <option>ירושלים</option>
+                                <option>רמת גן</option>
+                                <option>נתניה</option>
+                                <option>מודיעין</option>
+                                <option>תל אביב</option>
+                            </select>
+                        </div>
+
+                        <!-- Form legal text -->
+                        <p class="paragraph-small">השדות המסומנים ב-* הם שדות חובה</p>
+                        <p class="paragraph-small">
+                            ידוע לי שהפרטים שמסרתי לעיל ייכללו במאגרי המידע של כלמוביל בהתאם למדיניות הפרטיות
+                        </p>
+
+                        <!-- Marketing consent checkbox -->
+                        <div class="checkbox-line">
+                            <input type="checkbox" id="marketing" />
+                            <label for="marketing" class="paragraph-small">
+                                מאשר/ת קבלת פניות שיווקיות, מידע על מבצעים והטבות לרבות בדוא״ל/sms/ווטסאפ מכלמוביל
+                            </label>
+                        </div>
+
+                        <!-- Submit form button -->
+                        <button type="button" class="submit-btn">צרו איתי קשר</button>
+                        <p class="paragraph-center-terms">בכפוף לתקנון. *בתוספת אגרת רישוי החל מ- ₪3,806</p>
+                    </form>
+                </div>
+
+                <!-- Bottom footer branding -->
+                <div class="content-bottom">
+                    <hr class="divider" />
+                    <img src="images/Colmobile-Logo.png" alt="colmobile logo" class="logo2" />
+                </div>
+            </aside>
+        </div>
+
+        <!-- Bootstrap JavaScript bundle -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

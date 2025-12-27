@@ -1,0 +1,280 @@
+/* Project color variables and constants */
+:root {
+    --primary-blue: #3498db;
+    --bg-dark: #121212;
+    --bg-black: #000000;
+    --text-white: #ffffff;
+    --safety-green: #27ae60;
+    --pollution-red: #e74c3c;
+    --caption-shadow: rgba(0, 0, 0, 0.4);
+}
+
+/* Global reset for consistent spacing across browsers */
+*, *::before, *::after {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+/* Base body styles and scroll prevention */
+body {
+    font-family: 'Heebo', sans-serif;
+    direction: rtl;
+    background-color: var(--bg-dark);
+    height: 100vh;
+    overflow: hidden; 
+}
+
+/* Split layout container */
+.main-layout {
+    display: flex;
+    flex-direction: row; 
+    width: 100%;
+    height: 100vh;
+}
+
+/* Gallery section occupying 75% of the screen */
+.gallery {
+    width: 75%;
+    height: 100vh;
+    background-color: var(--bg-black);
+}
+
+/* Ensures carousel images cover the full height */
+.carousel-item img {
+    height: 100vh;
+    object-fit: cover;
+}
+
+/* Semi-transparent text container over the images */
+.carousel-caption {
+    background: var(--caption-shadow); 
+    padding: 20px;
+    border-radius: 15px;
+    bottom: 10%; 
+}
+
+/* Main title styling for car models */
+.carousel-caption h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: var(--primary-blue);
+}
+
+/* Subtitles styling in the caption */
+.carousel-caption h3 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+/* General text within the caption */
+.carousel-caption p {
+    font-size: 1.1rem;
+    opacity: 0.8;
+}
+
+/* Styling for safety and pollution rating badges */
+.highlight {
+    color: var(--text-white);
+    padding: 2px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin: 0 5px;
+}
+
+/* Green badge for safety levels */
+.safety { 
+    background-color: var(--safety-green); 
+}
+
+/* Red badge for pollution levels */
+.pollution {
+    background-color: var(--pollution-red); 
+}
+
+/* Sidebar section for the contact form (25% width) */
+.frame {
+    background-color: var(--bg-black);
+    width: 25%;
+    height: 100%;
+    padding: 1vw; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Top container for logo and main heading */
+.content-top { 
+    flex: 1; 
+    display: flex; 
+    flex-direction: column;
+}
+
+/* Sidebar main title */
+h2 {
+    color: var(--primary-blue);
+    text-align: center;
+    font-size: 1.5rem; 
+    margin-bottom: 1vh;
+}
+
+/* Form structure with vertical spacing */
+.contact-form { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 2vh; 
+} 
+
+/* Styles for input fields and select menus */
+.field input, .field select {
+    width: 100%; 
+    padding: 8px; 
+    border-radius: 4px; 
+    border: 1px solid var(--text-white);
+    font-size: 0.9rem; 
+    background: transparent; 
+    color: var(--text-white); 
+    outline: none;
+    text-align: right; 
+}
+
+/* Right-aligning utility for numbers/emails */
+.align-right {
+    text-align: right !important;
+    direction: rtl !important;
+}
+
+/* Placeholder text color */
+.field input::placeholder, .field select {
+    color: rgba(255, 255, 255, 0.6); 
+}
+
+/* Visual state for focused or valid inputs */
+.field select:focus, .field select:valid {
+    color: var(--text-white); 
+}
+
+/* Dropdown options background fix */
+.field select option { 
+    background-color: var(--bg-black); 
+    color: var(--text-white); 
+}
+
+/* Main submission button styling and effects */
+.submit-btn {
+    width: 100%; 
+    font-size: 1rem; 
+    padding: 10px;
+    background-color: var(--primary-blue);
+    color: var(--text-white); 
+    border: 0; 
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover state for the submit button */
+.submit-btn:hover { 
+    background-color: var(--text-white); 
+    color: var(--primary-blue); 
+}
+
+/* Top logo styling */
+.logo { 
+    display: block;
+    width: 30px;
+    margin: 0 auto 5px auto;
+}
+
+/* Bottom company logo styling */
+.logo2 {
+    display: block;
+    width: 75px;
+    margin: 2px auto 0 auto; 
+} 
+
+/* Horizontal line separator */
+.divider { 
+    border: none;
+    height: 1px;
+    background: var(--text-white); 
+    margin: 5px 0 2px 0; 
+}
+
+/* Small legal and instructional text */
+.paragraph-small {
+    color: var(--text-white); 
+    font-size: 0.65rem; 
+    text-align: right; 
+    line-height: 1.2; 
+}
+
+/* Centered footer terms */
+.paragraph-center-terms { 
+    color: var(--text-white); 
+    font-size: 0.6rem; 
+    text-align: center;
+    margin-top: 2px; 
+}
+
+/* Layout for the marketing checkbox line */
+.checkbox-line {
+    display: flex;
+    align-items: center; 
+    gap: 8px; 
+    margin: 2px 0; 
+}
+
+/* Mobile and Tablet responsiveness for screens smaller than 1024px */
+@media (max-width: 1024px) 
+{
+    /* Enable scrolling and switch to vertical layout */
+    body {
+        overflow: auto; 
+        height: auto;
+    }
+    .main-layout {
+        flex-direction: column; 
+        height: auto;
+    }
+    /* Fixed gallery height on mobile */
+    .gallery {
+        width: 100%;
+        height: 50vh; 
+    }
+    /* Full width sidebar on mobile */
+    .frame {
+        width: 100%;
+        height: auto;
+        padding: 30px 20px;
+    }
+    .carousel-item img {
+        height: 50vh !important;
+    }
+
+    /* Adjusting gallery text for small viewports */
+    .carousel-caption {
+        width: 90%;
+        left: 5%;
+        right: 5%;
+        padding: 15px 10px;
+        bottom: 5% !important;
+    }
+    .carousel-caption h1 {
+        font-size: 1.4rem !important;
+        margin-bottom: 5px;
+        line-height: 1.2;
+    }
+    .stats {
+        font-size: 0.8rem !important;
+        margin-bottom: 5px;
+    }
+    .highlight {
+        padding: 1px 6px;
+        margin: 0 2px;
+    }
+    .site-link {
+        font-size: 0.8rem !important;
+    }
+}
