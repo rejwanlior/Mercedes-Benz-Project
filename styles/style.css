@@ -32,18 +32,28 @@ body {
     flex-direction: row; 
     width: 100%;
     min-height: 100vh;
+    align-items: stretch;
 }
 
 /* Gallery section occupying 75% of the screen */
 .gallery {
     width: 75%;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     background-color: var(--bg-black);
+}
+
+#mercedesCarousel, 
+.carousel-inner, 
+.carousel-item {
+    height: 100% !important;
+    min-height: 100vh;
 }
 
 /* Ensures carousel images cover the full height */
 .carousel-item img {
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     object-fit: cover;
 }
 
